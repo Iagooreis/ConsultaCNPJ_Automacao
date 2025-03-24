@@ -1,7 +1,7 @@
-# Projeto de Busca de Dados de Empresas por CNPJ
+# 🔍 Projeto de Busca de Dados de Empresas por CNPJ
 Este projeto tem como objetivo buscar dados cadastrais de empresas a partir dos seus CNPJs utilizando a API pública da Receita Federal, processando as informações e armazenando-as em uma planilha Excel.
 
-__Funcionalidade:__
+__🚀 Funcionalidades:__
 ---------------------------
 O código realiza as seguintes etapas:
 
@@ -11,34 +11,35 @@ Consulta à API: Para cada CNPJ listado, o código faz uma requisição à API p
 
 Tratamento dos Dados: Os dados obtidos da API são processados, sendo extraídas informações como:
 
-CNPJ
+- CNPJ
 
-Nome da empresa
+- Nome da empresa
 
-Telefone
+- Telefone
 
-E-mail
+- E-mail
 
-Endereço (logradouro, bairro, município, estado, CEP...)
+- Endereço (logradouro, bairro, município, estado, CEP...)
 
-__Atividade principal:__
-------------------
-Armazenamento em Excel: As informações extraídas são salvas em uma planilha Excel no formato .xlsx. Se a aba "Dados" já existir, os novos dados são adicionados à aba existente, mantendo as informações anteriores intactas.
+- Atividade principal
 
-Estrutura do Repositório
-buscarcnpj.py: O código principal que realiza todas as operações de consulta, processamento e salvamento dos dados.
+✅Armazenamento em Excel: As informações extraídas são salvas em uma planilha Excel no formato .xlsx. Se a aba "Dados" já existir, os novos dados são adicionados à aba existente, mantendo as informações anteriores intactas.
 
-CNPJ.xlsx: Planilha Excel contendo uma lista de CNPJs. O arquivo precisa estar presente no mesmo diretório que o script.
+__📂Estrutura do Repositório:__
+-----
+📄 buscarcnpj.py: O código principal que realiza todas as operações de consulta, processamento e salvamento dos dados.
 
-A planilha deve ter uma aba chamada "CNPJ" e uma coluna chamada "CNPJ" que contém os números de CNPJ a serem consultados.
+📄 CNPJ.xlsx: Planilha Excel contendo uma lista de CNPJs. O arquivo precisa estar presente no mesmo diretório que o script.
 
-__Requisitos:__
+📄 A planilha deve ter uma aba chamada "CNPJ" e uma coluna chamada "CNPJ" que contém os números de CNPJ a serem consultados.
+
+__⚙️ Requisitos:__
 --------
 Este projeto foi desenvolvido com as seguintes dependências:
 
 pandas, openpyxl, http.client, json
 
-__Como Usar:__
+__🛠 Como Usar:__
 ------
 1. Preparação do Arquivo Excel
 Antes de rodar o código, você precisa garantir que o arquivo CNPJ.xlsx exista no mesmo diretório do script buscarcnpj.py. A planilha precisa ter uma aba chamada CNPJ e outra DADOS, Na aba CNPJ deve ter uma coluna chamada CNPJ contendo os CNPJs das empresas que você deseja consultar, os dados buscados serão salvos na aba DADOS. 
@@ -50,3 +51,7 @@ pip install -r requirements.txt
 4. Executando o Código
 Após garantir que o arquivo CNPJ.xlsx esteja configurado corretamente e as dependências estejam instaladas, você pode executar o código com o seguinte comando no terminal:
 python buscarcnpj.py
+
+__📌 Observação:__
+-----
+A API utilizada possui limitação de requisições. O plano gratuito permite 3 buscas por minuto. 
